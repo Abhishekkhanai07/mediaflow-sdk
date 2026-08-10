@@ -74,8 +74,8 @@ The component library is independent from the SDK core and wrappers.
 
 - **GitHub Repository:** https://github.com/Abhishekkhanai07/mediaflow-sdk
 - **Live Application:** https://mediaflow-sdk-web-4ir8.vercel.app/
-- **SDK Documentation:** Coming soon
-- **Component Documentation:** Coming soon
+- **SDK Documentation:** https://mediaflow-docs.vercel.app/sdk/
+- **Component Documentation:** https://mediaflow-docs.vercel.app/components/
 
 ## AI / skill disclosure
 
