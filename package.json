@@ -7,6 +7,6 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present"
+    "build": "npm run build --workspace=@mediaflow/core && npm run build --workspace=@mediaflow/react && npm run build --workspace=@mediaflow/native && npm run build --workspace=@mediaflow/ui-react && npm run build --workspace=@mediaflow/ui-native && npm run build --workspace=web-app"
   }
 }
