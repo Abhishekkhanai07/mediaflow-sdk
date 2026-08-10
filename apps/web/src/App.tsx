@@ -38,7 +38,7 @@ export default function App() {
     }
   }, [videoData, page]);
 
-  useMediaEvent((event: any) => {
+  useMediaEvent((event) => {
     console.log('[App.tsx] Event received:', event.type, event.item.id);
   });
 

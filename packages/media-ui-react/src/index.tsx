@@ -33,7 +33,6 @@ export function useGrid({ onLoadMore, hasMore, loading }: UseGridOptions = {}) {
     getItemProps: (id: string | number) => ({
       role: 'gridcell',
       tabIndex: 0,
-      'aria-colindex': 1,
       key: id,
     }),
     getLoadMoreProps: () => ({
@@ -61,12 +60,19 @@ export function useLightbox({
   onIndexChange,
 }: UseLightboxOptions) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (isOpen) {
       setCurrentIndex(initialIndex);
     }
   }, [initialIndex, isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      dialogRef.current?.focus();
+    }
+  }, [isOpen]);
 
   const goToNext = useCallback(() => {
     setCurrentIndex((prev) => {
@@ -107,8 +113,10 @@ export function useLightbox({
     goToNext,
     goToPrev,
     getBackdropProps: () => ({
+      ref: dialogRef,
       role: 'dialog',
       'aria-modal': true,
+      tabIndex: -1,
       onClick: onClose,
     }),
     getContentProps: () => ({

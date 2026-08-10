@@ -9,7 +9,7 @@ This repository implements a headless media SDK ecosystem for a FotoOwl technica
   - `@mediaflow/core` is framework-agnostic and UI-free
   - Provides Pexels API client methods: `searchPhotos`, `getCuratedPhotos`, `searchVideos`, `getPopularVideos`, `getPhoto`, `getVideo`
   - Handles API key auth through `MediaClient(apiKey)`
-  - Implements in-memory response caching and request dedupe
+  - Implements basic in-memory response caching
   - Emits `view` and `download` events via a simple event emitter
   - Includes a default console listener for SDK events
 
@@ -70,10 +70,12 @@ The component library is independent from the SDK core and wrappers.
 - SDK tracking calls with `trackView` and `trackDownload`
 - Loading, empty, and error states in the app
 
-## What is still pending
+## Live Demo
 
-- Live deployment URLs for the app/docs
-- Separate published SDK docs and component docs
+- **GitHub Repository:** https://github.com/Abhishekkhanai07/mediaflow-sdk
+- **Live Application:** https://mediaflow-sdk-web-4ir8.vercel.app/
+- **SDK Documentation:** Coming soon
+- **Component Documentation:** Coming soon
 
 ## AI / skill disclosure
 
@@ -100,4 +102,4 @@ npm run dev --workspace apps/web
 - The demo app is intentionally functional and lightweight.
 - The UI is built around the SDK architecture, not visual polish.
 - If deploying, use Vercel or Netlify for the web app and a simple static docs site for README-based docs.
->>>>>>> d8509e7 (Initial cleanup: remove direct @mediaflow/core dependency, add .gitignore and env.example)
+
